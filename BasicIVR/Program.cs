@@ -49,6 +49,7 @@ app.MapPost("/voice/gather", ([FromForm] VoiceRequest request)
                     response.Say("Our address will be sent to your number via SMS.");
                     response.Say("Thank you for calling. Goodbye.");
                     response.Hangup();
+                    Console.WriteLine(message);
 					break;
 				default:
 					response.Say("Sorry, I don't understand that choice.").Pause();
